@@ -504,3 +504,84 @@ document.querySelector(".container").appendChild(clearBtn);
 
 </body>
 </html>
+<div class="gallery">
+
+<h2>🔥 Popular Pokémon</h2>
+
+<div class="pokemon-list">
+
+<div class="poke-card" onclick="loadPokemonByName('pikachu')">
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png">
+<p>Pikachu</p>
+</div>
+
+<div class="poke-card" onclick="loadPokemonByName('charizard')">
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png">
+<p>Charizard</p>
+</div>
+
+<div class="poke-card" onclick="loadPokemonByName('bulbasaur')">
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png">
+<p>Bulbasaur</p>
+</div>
+
+<div class="poke-card" onclick="loadPokemonByName('squirtle')">
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png">
+<p>Squirtle</p>
+</div>
+
+<div class="poke-card" onclick="loadPokemonByName('lucario')">
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png">
+<p>Lucario</p>
+</div>
+
+<div class="poke-card" onclick="loadPokemonByName('mewtwo')">
+<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png">
+<p>Mewtwo</p>
+</div>
+
+</div>
+</div>
+<style>
+
+.gallery{
+margin-top:30px;
+}
+
+.pokemon-list{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-top:15px;
+}
+
+.poke-card{
+background:#0f172a;
+border-radius:15px;
+padding:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.poke-card:hover{
+transform:scale(1.08);
+}
+
+.poke-card img{
+width:80px;
+height:80px;
+object-fit:contain;
+}
+
+.poke-card p{
+font-weight:bold;
+}
+
+</style>
+function loadPokemonByName(name){
+
+document.getElementById("pokeName").value=name;
+
+loadPokemon();
+
+}
